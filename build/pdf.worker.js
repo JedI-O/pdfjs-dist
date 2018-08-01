@@ -48888,11 +48888,13 @@
      }
     }
     function init(pdfManager, stream, password) {
-     assert(stream.length > 0, 'stream must have data');
-     this.pdfManager = pdfManager;
-     this.stream = stream;
-     var xref = new XRef(this.stream, password, pdfManager);
-     this.xref = xref;
+    //  assert(stream.length > 0, 'stream must have data');
+     if(stream.length > 0){
+       this.pdfManager = pdfManager;
+       this.stream = stream;
+       var xref = new XRef(this.stream, password, pdfManager);
+       this.xref = xref;
+     }
     }
     function find(stream, needle, limit, backwards) {
      var pos = stream.pos;
