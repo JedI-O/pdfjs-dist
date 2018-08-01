@@ -48887,7 +48887,8 @@
       error('PDFDocument: Unknown argument type');
      }
     }
-    function init(pdfManager, stream, password) {
+    function init(pdfManager, stream, password) {#
+		console.log('test branch');
      assert(stream.length > 0, 'stream must have data');
      this.pdfManager = pdfManager;
      this.stream = stream;
